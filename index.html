@@ -1,1 +1,934 @@
 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Cejas Advisory | Россия – Аргентина | Экономический и деловой консалтинг</title>
+
+  <meta name="description" id="metaDescription"
+    content="Cejas Advisory — независимая консалтинговая и аналитическая инициатива, специализирующаяся на развитии деловых отношений и коммерческих возможностей между Россией и Аргентиной.">
+  <meta name="author" content="Ángel Tobías Cejas">
+  <meta name="theme-color" content="#0D151E">
+
+  <!-- Open Graph / Previsualización limpia en Telegram, WhatsApp, LinkedIn y X -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" id="ogTitle" content="Cejas Advisory | Russia – Argentina Business & Economic Advisory">
+  <meta property="og:description" id="ogDesc" content="Independent consulting initiative specialized in bilateral trade intelligence, economic analysis, and B2B relations between Russia and Argentina.">
+  <meta property="og:url" content="https://tobiascejas.github.io/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@angelcejas_">
+  <meta name="twitter:creator" content="@angelcejas_">
+
+  <!-- Tipografía Institucional: Cormorant Garamond (Titulares) + Inter (Cuerpo técnico) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- GEO Optimization: Schema.org JSON-LD para indexación en LLMs (Perplexity, SearchGPT, Claude, Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://tobiascejas.github.io/#organization",
+        "name": "Cejas Advisory",
+        "url": "https://tobiascejas.github.io/",
+        "description": "Independent economic and business advisory initiative specialized in bilateral trade research, market intelligence, and commercial relations between Russia and Argentina.",
+        "areaServed": [
+          { "@type": "Country", "name": "Russian Federation" },
+          { "@type": "Country", "name": "Argentina" }
+        ],
+        "founder": { "@id": "https://tobiascejas.github.io/#founder" },
+        "knowsLanguage": ["es", "ru", "en"]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://tobiascejas.github.io/#founder",
+        "name": "Ángel Tobías Cejas",
+        "jobTitle": "Economist & Founder",
+        "nationality": "Argentine",
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Moscow, Russia"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Plekhanov Russian University of Economics (РЭУ им. Г.В. Плеханова)"
+        },
+        "sameAs": [
+          "https://x.com/angelcejas_"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --navy: #0D151E;
+      --navy-card: #14202E;
+      --navy-hover: #1A293A;
+      --gold: #D4B483;
+      --gold-muted: rgba(212, 180, 131, 0.15);
+      --ivory: #F4F2ED;
+      --muted: #A3B1BF;
+      --line: #263545;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--navy);
+      color: var(--ivory);
+      font-family: var(--sans);
+      line-height: 1.7;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      transition: all 0.2s ease;
+    }
+
+    .container {
+      width: min(1080px, 90%);
+      margin: auto;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      line-height: 1.1;
+      text-decoration: none;
+    }
+
+    .logo span {
+      display: block;
+      font-family: var(--sans);
+      color: var(--gold);
+      font-size: 9.5px;
+      font-weight: 600;
+      letter-spacing: 6.5px;
+      margin-top: 6px;
+    }
+
+    .languages {
+      display: flex;
+      gap: 6px;
+    }
+
+    .languages button {
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      padding: 6px 12px;
+      border-radius: 3px;
+      font-family: var(--sans);
+      font-size: 12px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .languages button:hover {
+      border-color: var(--gold);
+      color: var(--ivory);
+    }
+
+    .languages button.active {
+      background: var(--gold);
+      color: var(--navy);
+      border-color: var(--gold);
+      font-weight: 600;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 105px 0 95px;
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: 3px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      background: var(--gold-muted);
+      border: 1px solid rgba(212, 180, 131, 0.3);
+      border-radius: 3px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(38px, 5.5vw, 62px);
+      line-height: 1.12;
+      margin: 26px 0 22px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+
+    .intro {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 720px;
+      font-weight: 300;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      text-decoration: none;
+      padding: 13px 26px;
+      border-radius: 3px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      border: 1px solid var(--gold);
+    }
+
+    .button:hover {
+      background: #e2c699;
+      border-color: #e2c699;
+    }
+
+    .button-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--ivory);
+      text-decoration: none;
+      padding: 13px 24px;
+      border-radius: 3px;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid var(--line);
+    }
+
+    .button-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 75px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 3.8vw, 38px);
+      font-weight: 600;
+      margin: 0 0 18px;
+      letter-spacing: -0.3px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 760px;
+      margin-top: 0;
+      margin-bottom: 40px;
+      font-size: 16px;
+    }
+
+    /* CORRIDOR MARKETS */
+    .markets {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 22px;
+      text-align: center;
+      padding: 15px 0 5px;
+    }
+
+    .market {
+      border: 1px solid var(--line);
+      background: var(--navy-card);
+      padding: 32px 20px;
+      border-radius: 4px;
+    }
+
+    .market strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .market small {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .plus {
+      color: var(--gold);
+      font-size: 26px;
+      padding: 0 10px;
+    }
+
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .service {
+      background: var(--navy-card);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 32px;
+      transition: border-color 0.2s ease;
+    }
+
+    .service:hover {
+      border-color: rgba(212, 180, 131, 0.45);
+    }
+
+    .number {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    .service h3 {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 600;
+      margin: 10px 0 12px;
+    }
+
+    .service p {
+      color: var(--muted);
+      font-size: 14.5px;
+      margin-bottom: 16px;
+    }
+
+    .service ul {
+      padding-left: 18px;
+      margin: 0;
+    }
+
+    .service li {
+      color: var(--muted);
+      font-size: 13.5px;
+      margin-bottom: 6px;
+    }
+
+    /* METHODOLOGY STEPS */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .step {
+      border-top: 2px solid var(--gold);
+      padding: 22px 12px 0 0;
+    }
+
+    .step strong {
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--ivory);
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    /* PRINCIPAL / LEADERSHIP */
+    .principal-card {
+      background: var(--navy-card);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--gold);
+      border-radius: 4px;
+      padding: 36px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .principal-header {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .principal-name {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--ivory);
+    }
+
+    .principal-role {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .principal-bio {
+      color: var(--muted);
+      font-size: 15px;
+      margin: 8px 0 0;
+      max-width: 820px;
+    }
+
+    .credentials-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .cred-badge {
+      font-size: 12px;
+      color: var(--ivory);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--line);
+      padding: 6px 12px;
+      border-radius: 3px;
+    }
+
+    /* CONTACT & SOCIAL NETWORKS */
+    .contact {
+      background: var(--navy-card);
+      border: 1px solid var(--line);
+      padding: 50px 40px;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .contact .intro {
+      margin: 0 auto 30px;
+    }
+
+    .contact-channels {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .channel-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 20px;
+      background: var(--navy);
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      text-decoration: none;
+      font-size: 13.5px;
+      color: var(--ivory);
+      font-weight: 500;
+    }
+
+    .channel-link:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: var(--navy-hover);
+    }
+
+    .channel-label {
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 36px 0;
+      color: var(--muted);
+      font-size: 12.5px;
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: var(--muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    @media(max-width: 720px) {
+      .hero { padding: 70px 0 65px; }
+      .services, .steps { grid-template-columns: 1fr; }
+      .markets { grid-template-columns: 1fr; gap: 12px; }
+      .plus { transform: rotate(90deg); }
+      .contact { padding: 34px 20px; }
+      .principal-card { padding: 26px 20px; }
+      footer { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+
+  <header>
+    <a href="#" class="logo">
+      CEJAS
+      <span>ADVISORY</span>
+    </a>
+
+    <nav class="languages" aria-label="Language selector">
+      <button class="active" data-lang="ru" onclick="setLang('ru')">RU</button>
+      <button data-lang="es" onclick="setLang('es')">ES</button>
+      <button data-lang="en" onclick="setLang('en')">EN</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO (Pre-renderizado en ruso para indexación inmediata de bots y LLMs) -->
+    <div class="hero">
+      <div class="eyebrow" data-i18n="eyebrow">РОССИЯ – АРГЕНТИНА | ЭКОНОМИЧЕСКИЙ И ДЕЛОВОЙ КОНСАЛТИНГ</div>
+      <h1 data-i18n="headline">Аналитическая точность и развитие деловых связей между Россией и Аргентиной.</h1>
+      <p class="intro" data-i18n="intro">
+        Cejas Advisory — независимая консалтинговая инициатива, специализирующаяся на развитии деловых отношений, прикладном экономическом анализе и поиске коммерческих возможностей между Россией и Аргентиной.
+      </p>
+      <div class="hero-actions">
+        <a class="button" href="#contact" data-i18n="cta">Обсудить сотрудничество →</a>
+        <a class="button-outline" href="#about" data-i18n="ctaSecondary">О практике</a>
+      </div>
+    </div>
+
+    <!-- CORRIDOR / ABOUT -->
+    <section id="about">
+      <h2 data-i18n="aboutTitle">Два рынка. Прямой аналитический подход.</h2>
+      <p class="section-intro" data-i18n="aboutText">
+        Инициатива сфокусирована на устранении информационной и операционной асимметрии между российским и южноамериканским рынками. Работа ведётся напрямую из Москвы и ориентирована на компании, которым необходима объективная оценка торгового потенциала, отраслевая аналитика и выстраивание прямого диалога с контрагентами.
+      </p>
+
+      <div class="markets">
+        <div class="market">
+          <strong data-i18n="russia">Российская Федерация</strong>
+          <small data-i18n="russiaSub">Москва • Локальное присутствие</small>
+        </div>
+
+        <div class="plus">↔</div>
+
+        <div class="market">
+          <strong data-i18n="argentina">Аргентинская Республика</strong>
+          <small data-i18n="argentinaSub">Буэнос-Айрес / Неукен • Прямая экспертиза</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <h2 data-i18n="servicesTitle">Направления работы</h2>
+      <p class="section-intro" data-i18n="servicesIntro">
+        Прикладное аналитическое и стратегическое сопровождение двусторонних коммерческих инициатив.
+      </p>
+
+      <div class="services">
+
+        <article class="service">
+          <div class="number">01</div>
+          <h3 data-i18n="s1Title">Рыночная и экономическая аналитика</h3>
+          <p data-i18n="s1">Прикладное исследование отраслей, ценовой конъюнктуры и коммерческого потенциала.</p>
+          <ul>
+            <li data-i18n="s1a">Оценка спроса, предложения и структуры рынка</li>
+            <li data-i18n="s1b">Анализ конкурентной среды и ценовых спредов</li>
+            <li data-i18n="s1c">Выявление рентабельных торговых ниш</li>
+          </ul>
+        </article>
+
+        <article class="service">
+          <div class="number">02</div>
+          <h3 data-i18n="s2Title">Развитие деловых связей (B2B)</h3>
+          <p data-i18n="s2">Выстраивание прямых профессиональных контактов между компаниями двух стран.</p>
+          <ul>
+            <li data-i18n="s2a">Поиск и первичный скрининг профильных партнёров</li>
+            <li data-i18n="s2b">Подготовка коммерческих предложений на языке контрагента</li>
+            <li data-i18n="s2c">Культурная и деловая модерация переговоров</li>
+          </ul>
+        </article>
+
+        <article class="service">
+          <div class="number">03</div>
+          <h3 data-i18n="s3Title">Сопровождение внешней торговли</h3>
+          <p data-i18n="s3">Диагностика барьеров и издержек при подготовке экспортно-импортных операций.</p>
+          <ul>
+            <li data-i18n="s3a">Анализ тарифного и нетарифного регулирования (ТН ВЭД / NCM)</li>
+            <li data-i18n="s3b">Оценка логистических и операционных маршрутов</li>
+            <li data-i18n="s3c">Структурирование коммерческих условий сделок</li>
+          </ul>
+        </article>
+
+        <article class="service">
+          <div class="number">04</div>
+          <h3 data-i18n="s4Title">Стратегический консалтинг</h3>
+          <p data-i18n="s4">Индивидуальная разработка стратегии выхода и позиционирования на целевом рынке.</p>
+          <ul>
+            <li data-i18n="s4a">Разработка дорожной карты выхода на рынок (Market Entry)</li>
+            <li data-i18n="s4b">Макроэкономическая и регуляторная оценка рисков</li>
+            <li data-i18n="s4c">Информационно-аналитическая поддержка руководства</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- METHODOLOGY -->
+    <section id="method">
+      <h2 data-i18n="methodTitle">Формат работы</h2>
+
+      <div class="steps">
+        <div class="step">
+          <strong data-i18n="step1Title">01. Диагностика</strong>
+          <p data-i18n="step1Text">Изучение коммерческой задачи, товарной номенклатуры и реальной экономики проекта без шаблонных отчётов.</p>
+        </div>
+
+        <div class="step">
+          <strong data-i18n="step2Title">02. Архитектура решения</strong>
+          <p data-i18n="step2Text">Формирование конкретного плана действий: от расчёта издержек и барьеров до перечня целевых контрагентов.</p>
+        </div>
+
+        <div class="step">
+          <strong data-i18n="step3Title">03. Реализация и контакт</strong>
+          <p data-i18n="step3Text">Содействие в установлении прямого диалога между сторонами и сопровождение переговорного процесса.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRINCIPAL / FOUNDER (Transparencia institucional sin fingir estructura masiva) -->
+    <section id="principal">
+      <h2 data-i18n="principalSectionTitle">Руководитель инициативы</h2>
+
+      <div class="principal-card">
+        <div class="principal-header">
+          <div class="principal-name">Ángel Tobías Cejas</div>
+          <div class="principal-role" data-i18n="principalRole">Основатель • Экономист (Аргентина / Москва)</div>
+        </div>
+
+        <p class="principal-bio" data-i18n="principalBio">
+          Аргентинский экономист, базирующийся в Москве. Специализируется на международных финансах, прикладном макроэкономическом анализе и двусторонней торговле между Россией и странами Латинской Америки. Сочетает академическую подготовку в области финансов в РЭУ им. Г.В. Плеханова с практическим опытом институциональных переговоров и выстраивания деловых связей в Аргентине.
+        </p>
+
+        <div class="credentials-bar">
+          <span class="cred-badge" data-i18n="cred1">Экономист (Аргентина)</span>
+          <span class="cred-badge" data-i18n="cred2">Магистратура по финансам • РЭУ им. Г.В. Плеханова (Москва)</span>
+          <span class="cred-badge" data-i18n="cred3">Языки: Испанский (родной) • Русский • Английский</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & DIRECT NETWORKS -->
+    <section id="contact">
+      <div class="contact">
+        <h2 data-i18n="contactTitle">Прямой контакт</h2>
+        <p class="intro" data-i18n="contactText">
+          Свяжитесь напрямую для обсуждения вашей коммерческой задачи, запроса аналитической диагностики или потенциального сотрудничества.
+        </p>
+
+        <a class="button" href="mailto:angeltobias.cejas@yandex.com" data-i18n="contactButton">
+          Написать на Email →
+        </a>
+
+        <div class="contact-channels">
+          <a class="channel-link" href="https://t.me/CejasQuantAI" target="_blank" rel="noopener noreferrer">
+            <span class="channel-label">Telegram</span>
+            <span>Direct Message</span>
+          </a>
+
+          <a class="channel-link" href="https://x.com/angelcejas_" target="_blank" rel="noopener noreferrer">
+            <span class="channel-label">X (Twitter)</span>
+            <span>@angelcejas_</span>
+          </a>
+
+          <a class="channel-link" href="https://www.linkedin.com/in/angelcejas/" target="_blank" rel="noopener noreferrer">
+            <span class="channel-label">LinkedIn</span>
+            <span>Angel Tobias Cejas</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>CEJAS ADVISORY</strong> • <span data-i18n="footerTagline">Независимая консалтинговая инициатива (Россия – Аргентина)</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://x.com/angelcejas_" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://t.me/CejasQuantAI" target="_blank" rel="noopener">Telegram</a>
+      <a href="mailto:angeltobias.cejas@yandex.com">Email</a>
+    </div>
+    <div>© 2026 Angel Tobias Cejas</div>
+  </footer>
+
+</div>
+
+<script>
+const translations = {
+  ru: {
+    title: "Cejas Advisory | Россия – Аргентина | Экономический и деловой консалтинг",
+    description: "Cejas Advisory — независимая консалтинговая инициатива, специализирующаяся на развитии деловых отношений и коммерческих возможностей между Россией и Аргентиной.",
+    eyebrow: "РОССИЯ – АРГЕНТИНА | ЭКОНОМИЧЕСКИЙ И ДЕЛОВОЙ КОНСАЛТИНГ",
+    headline: "Аналитическая точность и развитие деловых связей между Россией и Аргентиной.",
+    intro: "Cejas Advisory — независимая консалтинговая инициатива, специализирующаяся на развитии деловых отношений, прикладном экономическом анализе и поиске коммерческих возможностей между Россией и Аргентиной.",
+    cta: "Обсудить сотрудничество →",
+    ctaSecondary: "О практике",
+    aboutTitle: "Два рынка. Прямой аналитический подход.",
+    aboutText: "Инициатива сфокусирована на устранении информационной и операционной асимметрии между российским и южноамериканским рынками. Работа ведётся напрямую из Москвы и ориентирована на компании, которым необходима объективная оценка торгового потенциала, отраслевая аналитика и выстраивание прямого диалога с контрагентами.",
+    russia: "Российская Федерация",
+    russiaSub: "Москва • Локальное присутствие",
+    argentina: "Аргентинская Республика",
+    argentinaSub: "Буэнос-Айрес / Неукен • Прямая экспертиза",
+    servicesTitle: "Направления работы",
+    servicesIntro: "Прикладное аналитическое и стратегическое сопровождение двусторонних коммерческих инициатив.",
+    s1Title: "Рыночная и экономическая аналитика",
+    s1: "Прикладное исследование отраслей, ценовой конъюнктуры и коммерческого потенциала.",
+    s1a: "Оценка спроса, предложения и структуры рынка",
+    s1b: "Анализ конкурентной среды и ценовых спредов",
+    s1c: "Выявление рентабельных торговых ниш",
+    s2Title: "Развитие деловых связей (B2B)",
+    s2: "Выстраивание прямых профессиональных контактов между компаниями двух стран.",
+    s2a: "Поиск и первичный скрининг профильных партнёров",
+    s2b: "Подготовка коммерческих предложений на языке контрагента",
+    s2c: "Культурная и деловая модерация переговоров",
+    s3Title: "Сопровождение внешней торговли",
+    s3: "Диагностика барьеров и издержек при подготовке экспортно-импортных операций.",
+    s3a: "Анализ тарифного и нетарифного регулирования (ТН ВЭД / NCM)",
+    s3b: "Оценка логистических и операционных маршрутов",
+    s3c: "Структурирование коммерческих условий сделок",
+    s4Title: "Стратегический консалтинг",
+    s4: "Индивидуальная разработка стратегии выхода и позиционирования на целевом рынке.",
+    s4a: "Разработка дорожной карты выхода на рынок (Market Entry)",
+    s4b: "Макроэкономическая и регуляторная оценка рисков",
+    s4c: "Информационно-аналитическая поддержка руководства",
+    methodTitle: "Формат работы",
+    step1Title: "01. Диагностика",
+    step1Text: "Изучение коммерческой задачи, товарной номенклатуры и реальной экономики проекта без шаблонных отчётов.",
+    step2Title: "02. Архитектура решения",
+    step2Text: "Формирование конкретного плана действий: от расчёта издержек и барьеров до перечня целевых контрагентов.",
+    step3Title: "03. Реализация и контакт",
+    step3Text: "Содействие в установлении прямого диалога между сторонами и сопровождение переговорного процесса.",
+    principalSectionTitle: "Руководитель инициативы",
+    principalRole: "Основатель • Экономист (Аргентина / Москва)",
+    principalBio: "Аргентинский экономист, базирующийся в Москве. Специализируется на международных финансах, прикладном макроэкономическом анализе и двусторонней торговле между Россией и странами Латинской Америки. Сочетает академическую подготовку в области финансов в РЭУ им. Г.В. Плеханова с практическим опытом институциональных переговоров и выстраивания деловых связей в Аргентине.",
+    cred1: "Экономист (Аргентина)",
+    cred2: "Магистратура по финансам • РЭУ им. Г.В. Плеханова (Москва)",
+    cred3: "Языки: Испанский (родной) • Русский • Английский",
+    contactTitle: "Прямой контакт",
+    contactText: "Свяжитесь напрямую для обсуждения вашей коммерческой задачи, запроса аналитической диагностики или потенциального сотрудничества.",
+    contactButton: "Написать на Email →",
+    footerTagline: "Независимая консалтинговая инициатива (Россия – Аргентина)"
+  },
+
+  es: {
+    title: "Cejas Advisory | Rusia – Argentina | Consultoría Económica y Comercial",
+    description: "Cejas Advisory es una iniciativa independiente de consultoría especializada en el desarrollo de relaciones empresariales y oportunidades comerciales entre Rusia y Argentina.",
+    eyebrow: "RUSIA – ARGENTINA | CONSULTORÍA ECONÓMICA Y COMERCIAL",
+    headline: "Rigor analítico y desarrollo de relaciones empresariales entre Rusia y Argentina.",
+    intro: "Cejas Advisory es una iniciativa independiente de consultoría especializada en el desarrollo de relaciones empresariales, análisis económico aplicado y oportunidades comerciales entre Rusia y Argentina.",
+    cta: "Conversar sobre un proyecto →",
+    ctaSecondary: "Sobre la iniciativa",
+    aboutTitle: "Dos mercados. Un enfoque analítico directo.",
+    aboutText: "La iniciativa se enfoca en reducir la asimetría informativa y operativa entre el mercado ruso y el sudamericano. Con presencia directa en Moscú y origen en Argentina, brinda a las empresas una evaluación objetiva del potencial comercial, inteligencia sectorial y articulación directa con contrapartes locales.",
+    russia: "Federación Rusa",
+    russiaSub: "Moscú • Presencia operativa en terreno",
+    argentina: "República Argentina",
+    argentinaSub: "Buenos Aires / Neuquén • Conocimiento nativo",
+    servicesTitle: "Áreas de especialización",
+    servicesIntro: "Acompañamiento analítico y estratégico para el desarrollo de iniciativas comerciales bilaterales.",
+    s1Title: "Inteligencia de Mercado y Análisis Económico",
+    s1: "Investigación aplicada de sectores, estructura de precios y viabilidad comercial.",
+    s1a: "Evaluación de oferta, demanda y estructura de mercado",
+    s1b: "Análisis de competencia y diferenciales de precios",
+    s1c: "Identificación de nichos comerciales rentables",
+    s2Title: "Desarrollo de Relaciones Comerciales (B2B)",
+    s2: "Articulación de contactos profesionales directos entre empresas de ambos países.",
+    s2a: "Identificación y filtrado inicial de potenciales contrapartes",
+    s2b: "Estructuración de propuestas comerciales en el idioma local",
+    s2c: "Facilitación cultural y ejecutiva en negociaciones",
+    s3Title: "Diagnóstico de Comercio Exterior",
+    s3: "Relevamiento de fricciones, aranceles y costos en operaciones de importación y exportación.",
+    s3a: "Análisis de barreras arancelarias y para-arancelarias (NCM / ТН ВЭД)",
+    s3b: "Evaluación de rutas logísticas y estructura de costos",
+    s3c: "Acompañamiento en la estructuración comercial de operaciones",
+    s4Title: "Asesoramiento Estratégico",
+    s4: "Diseño de estrategias a medida para la inserción y posicionamiento en el mercado objetivo.",
+    s4a: "Hojas de ruta para entrada a mercado (Market Entry)",
+    s4b: "Lectura del entorno macroeconómico y regulatorio",
+    s4c: "Soporte analítico directo para directorios y gerencias",
+    methodTitle: "Metodología de trabajo",
+    step1Title: "01. Diagnóstico",
+    step1Text: "Relevamiento de los objetivos de la empresa, la posición arancelaria y la economía real del proyecto, sin informes genéricos.",
+    step2Title: "02. Hoja de Ruta",
+    step2Text: "Definición de un plan de acción concreto: desde la estructura de costos y barreras hasta la identificación de contrapartes.",
+    step3Title: "03. Articulación",
+    step3Text: "Facilitación del contacto directo entre las partes y acompañamiento técnico durante las tratativas comerciales.",
+    principalSectionTitle: "Dirección de la iniciativa",
+    principalRole: "Fundador • Economista (Argentina / Moscú)",
+    principalBio: "Economista argentino radicado en Moscú. Especializado en finanzas internacionales, análisis macroeconómico aplicado y comercio bilateral entre Rusia y América Latina. Combina formación de posgrado en Finanzas en la Universidad Rusa de Economía Plejánov (РЭУ им. Г.В. Плеханова) con experiencia previa en articulación institucional y negociación en Argentina.",
+    cred1: "Economista (Argentina)",
+    cred2: "Maestría en Finanzas • Univ. Plejánov (Moscú)",
+    cred3: "Idiomas: Español (Nativo) • Ruso • Inglés",
+    contactTitle: "Contacto directo",
+    contactText: "Comuníquese directamente para evaluar una oportunidad comercial, solicitar un diagnóstico preliminar o explorar una posible colaboración.",
+    contactButton: "Enviar correo electrónico →",
+    footerTagline: "Iniciativa independiente de consultoría (Rusia – Argentina)"
+  },
+
+  en: {
+    title: "Cejas Advisory | Russia – Argentina | Economic & Business Advisory",
+    description: "Cejas Advisory is an independent consulting initiative specialized in developing business relationships and commercial opportunities between Russia and Argentina.",
+    eyebrow: "RUSSIA – ARGENTINA | ECONOMIC & BUSINESS ADVISORY",
+    headline: "Analytical precision and business development between Russia and Argentina.",
+    intro: "Cejas Advisory is an independent consulting initiative specialized in developing business relationships, applied economic analysis, and commercial opportunities between Russia and Argentina.",
+    cta: "Discuss a collaboration →",
+    ctaSecondary: "About the practice",
+    aboutTitle: "Two markets. One direct analytical approach.",
+    aboutText: "The initiative focuses on bridging the informational and operational gap between the Russian and South American markets. Operating directly out of Moscow with native roots in Argentina, it provides companies with objective assessments of trade potential, sector intelligence, and direct B2B engagement.",
+    russia: "Russian Federation",
+    russiaSub: "Moscow • On-the-ground presence",
+    argentina: "Argentine Republic",
+    argentinaSub: "Buenos Aires / Neuquén • Native expertise",
+    servicesTitle: "Areas of Focus",
+    servicesIntro: "Applied analytical and strategic support for bilateral commercial initiatives.",
+    s1Title: "Market & Economic Intelligence",
+    s1: "Applied research on industries, pricing structures, and commercial feasibility.",
+    s1a: "Supply, demand, and market structure assessment",
+    s1b: "Competitive landscape and price spread analysis",
+    s1c: "Identification of viable trade niches",
+    s2Title: "B2B Relationship Development",
+    s2: "Building direct professional links between counterparts in both countries.",
+    s2a: "Identification and initial screening of potential partners",
+    s2b: "Preparation of commercial proposals in the counterpart's language",
+    s2c: "Cross-cultural and executive negotiation facilitation",
+    s3Title: "Cross-Border Trade Advisory",
+    s3: "Diagnostic of commercial barriers and cost structures in bilateral trade.",
+    s3a: "Tariff and non-tariff barrier analysis (HS / ТН ВЭД / NCM)",
+    s3b: "Evaluation of logistics corridors and operational friction",
+    s3c: "Commercial structuring support for cross-border transactions",
+    s4Title: "Strategic Advisory",
+    s4: "Tailored market entry and positioning strategies for decision-makers.",
+    s4a: "Custom market entry roadmaps",
+    s4b: "Macroeconomic and regulatory risk reading",
+    s4c: "Direct analytical briefings for executives and boards",
+    methodTitle: "Working Approach",
+    step1Title: "01. Diagnostic",
+    step1Text: "Assessment of the company's objectives, tariff classification, and unit economics—without generic boilerplate reports.",
+    step2Title: "02. Action Plan",
+    step2Text: "Development of a clear roadmap covering cost structures, regulatory requirements, and target counterparts.",
+    step3Title: "03. Execution Support",
+    step3Text: "Facilitation of direct B2B introductions and analytical support throughout bilateral negotiations.",
+    principalSectionTitle: "Practice Leadership",
+    principalRole: "Founder • Economist (Argentina / Moscow)",
+    principalBio: "Argentine economist based in Moscow. Specialized in international finance, applied macroeconomic analysis, and bilateral trade between Russia and Latin America. Combines graduate studies in Finance at Plekhanov Russian University of Economics (РЭУ им. Г.В. Плеханова) with prior experience in institutional relations and high-stakes negotiation in Argentina.",
+    cred1: "Economist (Argentina)",
+    cred2: "M.Sc. in Finance Candidate • Plekhanov University (Moscow)",
+    cred3: "Languages: Spanish (Native) • Russian • English",
+    contactTitle: "Direct Contact",
+    contactText: "Get in touch directly to discuss a commercial project, request an initial diagnostic, or explore a potential collaboration.",
+    contactButton: "Send an Email →",
+    footerTagline: "Independent consulting initiative (Russia – Argentina)"
+  }
+};
+
+function setLang(lang) {
+  const validLang = translations[lang] ? lang : "ru";
+  const t = translations[validLang];
+
+  document.documentElement.lang = validLang;
+  document.title = t.title;
+
+  const metaDesc = document.getElementById("metaDescription");
+  if (metaDesc) metaDesc.setAttribute("content", t.description);
+
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.dataset.i18n;
+    if (t[key]) el.textContent = t[key];
+  });
+
+  document.querySelectorAll("[data-lang]").forEach(btn => {
+    const active = btn.dataset.lang === validLang;
+    btn.classList.toggle("active", active);
+    btn.setAttribute("aria-pressed", String(active));
+  });
+
+  try {
+    localStorage.setItem("cejas_lang", validLang);
+  } catch (e) {}
+}
+
+// Selección inteligente de idioma: 1) Parámetro URL (?lang=es), 2) Memoria local, 3) Ruso por defecto
+(function initLanguage() {
+  const params = new URLSearchParams(window.location.search);
+  const urlLang = params.get("lang");
+  let savedLang = null;
+  try {
+    savedLang = localStorage.getItem("cejas_lang");
+  } catch (e) {}
+
+  if (urlLang && translations[urlLang]) {
+    setLang(urlLang);
+  } else if (savedLang && translations[savedLang]) {
+    setLang(savedLang);
+  } else {
+    setLang("ru");
+  }
+})();
+</script>
+</body>
+</html>
